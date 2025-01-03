@@ -3,74 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPMCAE Blog</title>
+    <title>FPMCAE v1.0</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
-        header {
+        .navbar {
             background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
             text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
-        main {
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
         }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: monospace;
-        }
-        .github-corner {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 80px;
+        .language-switcher {
+            float: left;
         }
     </style>
 </head>
 <body>
-    <a href="https://github.com/FPMManagers/FPMCAE" class="github-corner" aria-label="View source on GitHub">
-        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff;" aria-hidden="true">
-            <path d="M0 0l115 115h15l12 27 108 108V0z"></path>
-            <path d="M128 109c-15-1-25-13-23-27 1-8 6-15 12-19 6-4 8-11 6-17-1-5-7-9-12-11-6-2-13-1-19 3-5 3-10 9-10 15-3 12 1 23 8 30 6 6 14 10 23 10 9 0 17-4 23-10 6-6 9-14 8-22-1-7-5-13-10-17-6-4-13-5-19-3-5 2-11 6-12 11-2 6 0 13 6 17 6 4 11 11 12 19 2 14-8 26-23 27z" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-            <path d="M115 115c-3 0-4 1-4 4v20c0 3 1 4 4 4h20c3 0 4-1 4-4v-20c0-3-1-4-4-4h-20z" fill="currentColor" class="octo-body"></path>
-        </svg>
-    </a>
-    <header>
-        <h1>FPMCAE Blog</h1>
-    </header>
-    <main id="content">
-        Loading content...
-    </main>
 
-    <script>
-        async function fetchReadme() {
-            try {
-                const response = await fetch('https://raw.githubusercontent.com/FPMManagers/FPMCAE/main/README.md');
-                if (!response.ok) throw new Error('Failed to fetch README');
-                const markdown = await response.text();
-                document.getElementById('content').innerHTML = marked.parse(markdown);
-            } catch (error) {
-                document.getElementById('content').innerText = 'Error loading content: ' + error.message;
-            }
+<div class="navbar">
+    <div class="language-switcher">
+        <a href="#" onclick="switchLanguage('en')">English</a> | 
+        <a href="#" onclick="switchLanguage('zh')">中文</a>
+    </div>
+    <a href="https://github.com/FPMManagers/FPMCAE" target="_blank">GitHub</a>
+</div>
+
+<div class="content" id="content">
+    <!-- English Content -->
+    <div id="english-content">
+        <h1>Welcome to FPMCAE v1.0</h1>
+        <p>FPMCAE is a general-purpose simulation analysis software for complex structural behaviors, developed by Professor Luo Yaozhi's team at Zhejiang University. It uses the Finite Particle Method as its core algorithm and integrates pre-processing and post-processing functions, various solver engines, and parallel computing technology.</p>
+        <h2>Software Features</h2>
+        <ul>
+            <li><strong>Core Algorithm:</strong> Finite Particle Method for efficient simulation analysis of complex structural behaviors.</li>
+            <li><strong>Pre- and Post-Processing:</strong> Powerful tools for data input and result analysis.</li>
+            <li><strong>Solver Engines:</strong> Supports various types of solvers for different simulation needs.</li>
+            <li><strong>Parallel Computing:</strong> Integrated technology to enhance computational efficiency, suitable for large-scale simulations.</li>
+        </ul>
+        <h2>Application Areas</h2>
+        <ul>
+            <li>Civil Engineering and Transportation</li>
+            <li>Mechanical Manufacturing</li>
+            <li>Aerospace</li>
+            <li>Other fields requiring complex structural behavior simulation</li>
+        </ul>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions, please contact us:</p>
+        <ul>
+            <li>Email: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
+            <li>QQ Group: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
+        </ul>
+        <h2>Download</h2>
+        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V1.0.0-beta">Download the latest release of FPMCAE v1.0</a></p>
+    </div>
+
+    <!-- Chinese Content -->
+    <div id="chinese-content" style="display: none;">
+        <h1>欢迎使用 FPMCAE v1.0</h1>
+        <p>FPMCAE 是由浙江大学罗尧治教授团队自主研发的通用结构复杂行为仿真分析软件。采用有限质点法作为核心算法，集成了前后处理功能和多种求解器引擎，并融入了并行计算技术。</p>
+        <h2>软件功能</h2>
+        <ul>
+            <li><strong>核心算法：</strong>有限质点法，高效进行结构复杂行为的仿真分析。</li>
+            <li><strong>前后处理功能：</strong>强大的数据输入和结果分析工具。</li>
+            <li><strong>多种求解器引擎：</strong>支持多种类型的求解器，满足不同仿真需求。</li>
+            <li><strong>并行计算：</strong>集成技术提升计算效率，适合大规模模拟。</li>
+        </ul>
+        <h2>应用领域</h2>
+        <ul>
+            <li>土木交通</li>
+            <li>机械制造</li>
+            <li>航空航天</li>
+            <li>其他需要结构复杂行为仿真分析的领域</li>
+        </ul>
+        <h2>联系我们</h2>
+        <p>如果您有任何问题或建议，请联系我们：</p>
+        <ul>
+            <li>邮箱: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
+            <li>QQ 技术群: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
+        </ul>
+        <h2>下载地址</h2>
+        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V1.0.0-beta">下载 FPMCAE v1.0 最新版本</a></p>
+    </div>
+</div>
+
+<script>
+    function switchLanguage(language) {
+        var englishContent = document.getElementById('english-content');
+        var chineseContent = document.getElementById('chinese-content');
+        
+        if (language === 'en') {
+            englishContent.style.display = 'block';
+            chineseContent.style.display = 'none';
+        } else if (language === 'zh') {
+            englishContent.style.display = 'none';
+            chineseContent.style.display = 'block';
         }
+    }
+</script>
 
-        // Load the Marked library for Markdown parsing
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-        script.onload = fetchReadme;
-        document.head.appendChild(script);
-    </script>
 </body>
 </html>
