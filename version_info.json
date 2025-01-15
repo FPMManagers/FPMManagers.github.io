@@ -1,0 +1,24 @@
+{
+  "versions": {
+    "stable": {
+      "version": "1.0.0",
+      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
+      "release_date": "2025-01-10"
+    },
+    "dev": {
+      "version": "1.0.0-dev",
+      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
+      "release_date": "2025-01-15"
+    },
+    "beta": {
+      "version": "1.0.0-beta",
+      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
+      "release_date": "2025-01-12"
+    },
+    "daily": {
+      "version": "20250115",
+      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
+      "release_date": "2025-01-15"
+    }
+  }
+}
