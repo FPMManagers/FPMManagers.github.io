@@ -1,24 +1,36 @@
 {
-  "versions": {
-    "stable": {
-      "version": "1.0.0",
-      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
-      "release_date": "2025-01-10"
-    },
-    "dev": {
-      "version": "1.0.0-dev",
-      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
-      "release_date": "2025-01-15"
-    },
-    "beta": {
-      "version": "1.0.0-beta",
-      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
-      "release_date": "2025-01-12"
-    },
-    "daily": {
-      "version": "20250115",
-      "url": "https://github.com/FPMManagers/FPMCAE/releases/download/V1.0.0-beta/FPMCAE-Win-x64-1.0.0-beta-build1175.exe",
-      "release_date": "2025-01-15"
+    "version": {
+        "windows": {
+            "x86": {
+                "version_number": "1.1.0",
+                "download_url": ""
+            },
+            "x64": {
+                "version_number": "1.1.0",
+                "download_url": "https://osspandownload.zju.edu.cn/download/0067d4a7238d4be5980b60c525da4a5e/9057b2b63fbd82a86efc874091ecb8663348842dfe35427bdf211dc464f63899/FPMCAE-Win-x64-1.0.0.1175.exe"
+            },
+            "arm64": {
+                "version_number": "1.1.0",
+                "download_url": ""
+            }
+        },
+        "linux": {
+            "ubuntu": {
+                "version_number": "1.1.0",
+                "download_url": "fpmcae_1.1.0_amd64.deb"
+            },
+            "fedora": {
+                "version_number": "1.1.0",
+                "download_url": "fpmcae-1.1.0.x86_64.rpm"
+            },
+            "arch": {
+                "version_number": "1.1.0",
+                "download_url": "fpmcae-1.1.0-x86_64.pkg.tar.zst"
+            }
+        },
+        "macos": {
+            "version_number": "1.1.0",
+            "download_url": "fpmcae-macos.dmg"
+        }
     }
-  }
 }
