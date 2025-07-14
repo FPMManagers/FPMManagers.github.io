@@ -6,9 +6,9 @@
                 "download_url": ""
             },
             "x64": {
-                "version_number": "1.2.0",
+                "version_number": "2.0.0-beta",
                 "download_url": "https://pan.zju.edu.cn/share/7007015976c6ed8ffe4ea1b250",
-                "release_notes": "<h2>What's New in Version 1.1.0</h2><ul><li><b>Feature A</b>: Description of feature A.</li><li><b>Feature B</b>: Description of feature B.</li></ul><p>For more details, visit our <a href=\"https://example.com/release-notes\">release notes page</a>.</p>"
+                "release_notes": "<h2>What's New in Version 2.0.0-beta</h2><ul><li><b>Feature A</b>: Description of feature A.</li><li><b>Feature B</b>: Description of feature B.</li></ul><p>For more details, visit our <a href=\"https://example.com/release-notes\">release notes page</a>.</p>"
             },
             "arm64": {
                 "version_number": "1.1.0",
