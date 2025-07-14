@@ -7,7 +7,7 @@
             },
             "x64": {
                 "version_number": "1.2.0",
-                "download_url": "https://osspandownload.zju.edu.cn/download/0067d4a7238d4be5980b60c525da4a5e/9057b2b63fbd82a86efc874091ecb8663348842dfe35427bdf211dc464f63899/FPMCAE-Win-x64-1.0.0.1175.exe",
+                "download_url": "https://pan.zju.edu.cn/share/7007015976c6ed8ffe4ea1b250",
                 "release_notes": "<h2>What's New in Version 1.1.0</h2><ul><li><b>Feature A</b>: Description of feature A.</li><li><b>Feature B</b>: Description of feature B.</li></ul><p>For more details, visit our <a href=\"https://example.com/release-notes\">release notes page</a>.</p>"
             },
             "arm64": {
