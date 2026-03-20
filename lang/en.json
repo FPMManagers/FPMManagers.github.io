@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "name": "English",
+    "code": "en"
+  },
+  "nav": {
+    "download": "Download",
+    "docs": "Documentation",
+    "language": "Language",
+    "current_lang": "English",
+    "docs_menu": {
+      "user_manual": "User Manual",
+      "quick_start": "Quick Start",
+      "fpmt_format": "FPMT File Format"
+    }
+  },
+  "banner": {
+    "subtitle1": "Zhejiang University · Yangtze River Delta Oasis Innovation Center",
+    "slogan": "Future Technology | Endless Exploration",
+    "title2": "Advanced Simulation Technology",
+    "desc2": "Structural Complex Behavior Analysis Based on FPM",
+    "title3": "Multi-Domain Applications",
+    "desc3": "Civil Engineering · Mechanical Manufacturing · Aerospace"
+  },
+  "intro": {
+    "title": "Introduction",
+    "content": "FPMCAE is a general-purpose structural complex behavior simulation analysis software independently developed by Professor Luo Yaozhi's team at Zhejiang University. It adopts the Finite Particle Method as the core algorithm, integrates pre- and post-processing functions and multiple solver engines, and incorporates parallel computing technology."
+  },
+  "features": {
+    "title": "Features",
+    "items": [
+      {
+        "title": "Core Algorithm",
+        "desc": "Finite Particle Method for efficient simulation analysis of structural complex behaviors."
+      },
+      {
+        "title": "Pre/Post Processing",
+        "desc": "Powerful data input and result analysis tools."
+      },
+      {
+        "title": "Multiple Solver Engines",
+        "desc": "Supports various types of solvers to meet different simulation needs."
+      },
+      {
+        "title": "Parallel Computing",
+        "desc": "Integrated technology to improve computing efficiency, suitable for large-scale simulations."
+      }
+    ]
+  },
+  "applications": {
+    "title": "Applications",
+    "items": [
+      "Civil & Transportation",
+      "Mechanical Manufacturing",
+      "Aerospace",
+      "Other fields requiring structural complex behavior simulation"
+    ]
+  },
+  "news": {
+    "title": "Latest News",
+    "view_more": "View More",
+    "empty": "No news available"
+  },
+  "examples": {
+    "title": "Example Library",
+    "filters": {
+      "all": "All",
+      "structure": "Structural Analysis",
+      "multi-scale": "Multi-scale Analysis",
+      "form-finding": "Form-finding Analysis",
+      "earthquake-simulation": "Structural Earthquake Simulation",
+      "nonlinear": "Nonlinear Analysis"
+    },
+    "actions": {
+      "download": "Download",
+      "view_detail": "Details",
+      "preview": "Preview"
+    },
+    "meta": {
+      "file_size": "File Size",
+      "update_time": "Updated",
+      "downloads": "Downloads"
+    }
+  },
+  "video": {
+    "title": "FPMCAE Video Introduction",
+    "not_support": "Your browser does not support video playback."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": {
+      "label": "Email: ",
+      "value": "fpmcae@zju.edu.cn"
+    },
+    "qq": {
+      "label": "QQ Group: ",
+      "value": "437808661"
+    },
+    "qr": {
+      "wechat": "Follow Us",
+      "qq": "Tech Group"
+    }
+  },
+  "footer": {
+    "description": "Structural Complex Behavior Simulation Software by Zhejiang University",
+    "nav": {
+      "intro": "Introduction",
+      "features": "Features",
+      "examples": "Examples",
+      "contact": "Contact"
+    },
+    "copyright": "All Rights Reserved",
+    "organization": "Zhejiang University · Yangtze River Delta Oasis Innovation Center"
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "FPMCAE平台算例介绍 | 手把手教你索穹顶形态分析",
+    "titleEn": "Introduction to FPMCAE platform examples | Step-by-step guide to cable dome shape analysis",
+    "summary": "教大家使用FPMCAE V2.0平台进行的索穹顶张力结构初始形态（找形）分析。",
+    "summaryEn": "I will teach you how to use the FPMCAE V2.0 platform to perform initial form (form-finding) analysis of tension structures in cable domes.",
+    "date": "2026-03-12",
+    "icon": "data/newsImages/new1.png",
+    "url": "https://mp.weixin.qq.com/s/h9xI38HX-PMlaGoqgwYBjg",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "FPMCAE v2.0 正式版发布",
+    "titleEn": "FPMCAE v2.0 released",
+    "summary": "新版本发布，从属性库、前处理建模、求解、后处理和算例等多方面进行提升优化。",
+    "summaryEn": "The new version has been released, with enhancements and optimizations made in various aspects such as attribute library, pre-processing modeling, solving, post-processing, and examples.",
+    "date": "2026-02-11",
+    "icon": "data/newsImages/new2.png",
+    "url": "https://mp.weixin.qq.com/s/oG-Am8hPmx3bEg8rBQsLXA",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "FPMCAE V2.0 beta 公测版发布",
+    "titleEn": "FPMCAE V2.0 beta public beta version released",
+    "summary": "公测版发布，新增四大模块、各类功能和多种求解器，以及软件性能多方面优化。",
+    "summaryEn": "The public beta version has been released, introducing four new modules, various functions, and multiple solvers, as well as multiple optimizations in software performance.",
+    "date": "2025-09-20",
+    "icon": "data/newsImages/new3.png",
+    "url": "https://mp.weixin.qq.com/s/aNeDPc7kpfL_52F29e1ZQg",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "浙江大学自主研发结构复杂行为仿真分析软件FPMCAE",
+    "titleEn": "Zhejiang University independently developed the software FPMCAE for structural complex behavior simulation analysis",
+    "summary": "浙江大学罗尧治教授团队于第三届结构复杂行为学术研讨会上正式发布FPMCAE仿真分析软件",
+    "summaryEn": "Professor Luo Yaozhi's team from Zhejiang University officially released the FPMCAE simulation analysis software at the 3rd Academic Symposium on Structural Complex Behavior",
+    "date": "2025-05-21",
+    "icon": "data/newsImages/new4.png",
+    "url": "https://mp.weixin.qq.com/s/bZoeaMbc_9oBixBih8DHnw",
+    "featured": false
+  }
+]

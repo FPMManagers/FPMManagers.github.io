@@ -1,296 +1,237 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPMCAE V2.0.3.89</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .navbar .language-switcher {
-            float: left;
-        }
-        .navbar .language-switcher a {
-            float: none;
-            display: inline;
-            padding: 14px 8px;
-        }
-        .navbar a:hover, .language-switcher a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-    </style>
+    <title>FPMCAE - 有限质点法仿真分析软件</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- 导航栏 -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/icons/fpm.svg" alt="FPMCAE" class="logo-img">
+                </a>
+                
+                <div class="nav-right">
+                    <a href="https://github.com/FPMManagers/FPMCAE/releases/" class="nav-link" data-i18n="download">下载</a>
+                    
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-toggle" data-i18n="docs">
+                            文档 <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="docs/UsageGuide.pdf" target="_blank" data-i18n="user_manual">使用文档</a>
+                            <a href="docs/QuickStart.pdf" target="_blank" data-i18n="quick_start">快速上手</a>
+                            <a href="docs/FpmtBreif.pdf" target="_blank" data-i18n="fpmt_format">FPMT文件格式</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-toggle" id="lang-toggle">
+                            <i class="fas fa-globe"></i> <span data-i18n="current_lang">中文</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" onclick="setLanguage('zh')">中文</a>
+                            <a href="#" onclick="setLanguage('en')">English</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<div class="navbar">
-    <div class="language-switcher">
-        <a href="#" onclick="switchLanguage('zh')">中文</a> |
-        <a href="#" onclick="switchLanguage('en')">English</a> |
-        <a href="#" onclick="switchLanguage('es')">Español</a> |
-        <a href="#" onclick="switchLanguage('fr')">Français</a> |
-        <a href="#" onclick="switchLanguage('de')">Deutsch</a> |
-        <a href="#" onclick="switchLanguage('ru')">Русский</a> |
-        <a href="#" onclick="switchLanguage('ja')">日本語</a> |
-        <a href="#" onclick="switchLanguage('ar')">العربية</a>
-    </div>
-    <a href="https://github.com/FPMManagers/FPMCAE" target="_blank">GitHub</a>
-</div>
+    <!-- Hero Banner - 下载与展示整合 -->
+    <section class="hero-banner" id="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="hero-wrapper">
+                <!-- 左侧内容区 -->
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="download_title">FPMCAE，<br>面向工程结构的<br>通用复杂行为分析平台</h1>
+                    <div class="hero-actions">
+                        <a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89" class="btn btn-primary-download" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <span data-i18n="download_now">立即下载</span>
+                        </a>
+                        <a href="https://github.com/FPMManagers/FPMCAE/releases/" class="btn btn-all-downloads" target="_blank">
+                            <span data-i18n="all_downloads">所有下载</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 右侧展示卡片区 -->
+                <div class="hero-showcase">
+                    <div class="showcase-frame">
+                        <div class="carousel-container">
+                            <div class="carousel-slide banner-image active">
+                                <img src="images/banner/banner1.png" alt="FPMCAE Banner 1">
+                            </div>
+                            <div class="carousel-slide banner-image">
+                                <img src="images/banner/banner2.png" alt="FPMCAE Banner 2">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="content" id="content">
-    <!-- Chinese Content (Default) -->
-    <div id="zh-content">
-        <h1>欢迎使用 FPMCAE V2.0.3.89</h1>
-        <p>FPMCAE 是由浙江大学罗尧治教授团队自主研发的通用结构复杂行为仿真分析软件。采用有限质点法作为核心算法，集成了前后处理功能和多种求解器引擎，并融入了并行计算技术。</p>
-        <h2>软件功能</h2>
-        <ul>
-            <li><strong>核心算法：</strong>有限质点法，高效进行结构复杂行为的仿真分析。</li>
-            <li><strong>前后处理功能：</strong>强大的数据输入和结果分析工具。</li>
-            <li><strong>多种求解器引擎：</strong>支持多种类型的求解器，满足不同仿真需求。</li>
-            <li><strong>并行计算：</strong>集成技术提升计算效率，适合大规模模拟。</li>
-        </ul>
-        <h2>应用领域</h2>
-        <ul>
-            <li>土木交通</li>
-            <li>机械制造</li>
-            <li>航空航天</li>
-            <li>其他需要结构复杂行为仿真分析的领域</li>
-        </ul>
-        <h2>联系我们</h2>
-        <p>如果您有任何问题或建议，请联系我们：</p>
-        <ul>
-            <li>邮箱: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>QQ 技术群: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>下载地址</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">下载 FPMCAE  最新版本</a></p>
-    </div>
+    <!-- 简介模块 -->
+    <section class="section intro-section" id="intro">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="intro_title">简介</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="intro-content">
+                <p class="intro-text" data-i18n="intro_text">
+                    FPMCAE是由浙江大学罗尧治教授团队自主研发的通用结构复杂行为仿真分析软件。采用有限质点法作为核心算法，集成了前后处理功能和多种求解器引擎，并融入了并行计算技术。
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <!-- English Content -->
-    <div id="en-content" style="display: none;">
-        <h1>Welcome to FPMCAE </h1>
-        <p>FPMCAE is a general-purpose simulation analysis software for complex structural behaviors, independently developed by Professor Luo Yaozhi's team at Zhejiang University. It uses the Finite Particle Method as its core algorithm, integrates pre-processing and post-processing functions, various solver engines, and incorporates parallel computing technology.</p>
-        <h2>Software Features</h2>
-        <ul>
-            <li><strong>Core Algorithm:</strong> Finite Particle Method for efficient simulation analysis of complex structural behaviors.</li>
-            <li><strong>Pre- and Post-Processing:</strong> Powerful tools for data input and result analysis.</li>
-            <li><strong>Various Solver Engines:</strong> Supports multiple types of solvers to meet different simulation needs.</li>
-            <li><strong>Parallel Computing:</strong> Integrated technology to enhance computational efficiency, suitable for large-scale simulations.</li>
-        </ul>
-        <h2>Application Areas</h2>
-        <ul>
-            <li>Civil Engineering and Transportation</li>
-            <li>Mechanical Manufacturing</li>
-            <li>Aerospace</li>
-            <li>Other fields requiring complex structural behavior simulation</li>
-        </ul>
-        <h2>Contact Us</h2>
-        <p>If you have any questions or suggestions, please contact us:</p>
-        <ul>
-            <li>Email: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>QQ Group: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>Download</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">Download the latest release of FPMCAE </a></p>
-    </div>
+    <!-- 视频介绍模块 - 移到简介后面 -->
+    <section class="section video-section" id="video">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="video_title">FPMCAE视频介绍</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls poster="images/banner/banner1.png" id="main-video">
+                        <source src="videos/fpmcae-intro.mp4" type="video/mp4">
+                        <p data-i18n="video_not_support">您的浏览器不支持视频播放。</p>
+                    </video>
+                    <div class="video-overlay" id="video-overlay">
+                        <button class="play-btn" onclick="playVideo()">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Spanish Content -->
-    <div id="es-content" style="display: none;">
-        <h1>Bienvenido a FPMCAE </h1>
-        <p>FPMCAE es un software de análisis de simulación de propósito general para comportamientos estructurales complejos, desarrollado independientemente por el equipo del Profesor Luo Yaozhi de la Universidad de Zhejiang. Utiliza el Método de Partículas Finitas como su algoritmo central, integra funciones de preprocesamiento y postprocesamiento, varios motores de resolución e incorpora tecnología de computación paralela.</p>
-        <h2>Características del Software</h2>
-        <ul>
-            <li><strong>Algoritmo Central:</strong> Método de Partículas Finitas para análisis de simulación eficiente de comportamientos estructurales complejos.</li>
-            <li><strong>Pre y Postprocesamiento:</strong> Potentes herramientas para entrada de datos y análisis de resultados.</li>
-            <li><strong>Varios Motores de Resolución:</strong> Soporta múltiples tipos de solucionadores para satisfacer diferentes necesidades de simulación.</li>
-            <li><strong>Computación Paralela:</strong> Tecnología integrada para mejorar la eficiencia computacional, adecuada para simulaciones a gran escala.</li>
-        </ul>
-        <h2>Áreas de Aplicación</h2>
-        <ul>
-            <li>Ingeniería Civil y Transporte</li>
-            <li>Fabricación Mecánica</li>
-            <li>Aeroespacial</li>
-            <li>Otros campos que requieran simulación de comportamientos estructurales complejos</li>
-        </ul>
-        <h2>Contáctanos</h2>
-        <p>Si tienes alguna pregunta o sugerencia, por favor contáctanos:</p>
-        <ul>
-            <li>Email: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>Grupo QQ: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>Descargar</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">Descargar la última versión de FPMCAE </a></p>
-    </div>
+    <!-- 最近消息模块 -->
+    <section class="section news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="news_title">最近消息</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="news-grid" id="news-grid">
+                <!-- 消息卡片将通过JavaScript动态加载 -->
+            </div>
+            <div class="news-more">
+                <a href="javascript:void(0);" onclick="scrollToBottom()" class="btn btn-primary" data-i18n="view_more">
+                    <i class="fas fa-arrow-down"></i> 查看更多
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <!-- French Content -->
-    <div id="fr-content" style="display: none;">
-        <h1>Bienvenue sur FPMCAE V2.0.3.89</h1>
-        <p>FPMCAE est un logiciel d'analyse de simulation polyvalent pour les comportements structurels complexes, développé indépendamment par l'équipe du Professeur Luo Yaozhi de l'Université de Zhejiang. Il utilise la méthode des particules finies comme algorithme principal, intègre des fonctions de prétraitement et de post-traitement, divers moteurs solveurs et intègre la technologie de calcul parallèle.</p>
-        <h2>Caractéristiques du Logiciel</h2>
-        <ul>
-            <li><strong>Algorithme Principal :</strong> Méthode des particules finies pour une analyse de simulation efficace des comportements structurels complexes.</li>
-            <li><strong>Pré et Post-traitement :</strong> Outils puissants pour la saisie des données et l'analyse des résultats.</li>
-            <li><strong>Divers Moteurs Solveurs :</strong> Prend en charge plusieurs types de solveurs pour répondre à différents besoins de simulation.</li>
-            <li><strong>Calcul Parallèle :</strong> Technologie intégrée pour améliorer l'efficacité computationnelle, adaptée aux simulations à grande échelle.</li>
-        </ul>
-        <h2>Domaines d'Application</h2>
-        <ul>
-            <li>Génie Civil et Transport</li>
-            <li>Fabrication Mécanique</li>
-            <li>Aérospatial</li>
-            <li>Autres domaines nécessitant une simulation des comportements structurels complexes</li>
-        </ul>
-        <h2>Contactez-nous</h2>
-        <p>Si vous avez des questions ou des suggestions, veuillez nous contacter :</p>
-        <ul>
-            <li>Email : <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>Groupe QQ : <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>Télécharger</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">Télécharger la dernière version de FPMCAE V2.0.3.89</a></p>
-    </div>
+    <!-- 算例库模块 -->
+    <section class="section examples-section" id="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="examples_title">算例库</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="examples-filter">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">全部</button>
+                <button class="filter-btn" data-filter="structure" data-i18n="filter_structure">结构分析</button>
+                <button class="filter-btn" data-filter="multi-scale" data-i18n="filter_multiScale">多尺度分析</button>
+                <button class="filter-btn" data-filter="form-finding" data-i18n="filter_formFinding">找形分析</button>
+                <button class="filter-btn" data-filter="earthquake-simulation" data-i18n="filter_earthquakeSimulation">结构地震模拟</button>
+                <button class="filter-btn" data-filter="nonlinear" data-i18n="filter_nonlinear">非线性分析</button>
+            </div>
+            <div class="examples-grid" id="examples-grid">
+                <!-- 算例卡片将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
 
-    <!-- German Content -->
-    <div id="de-content" style="display: none;">
-        <h1>Willkommen bei FPMCAE V2.0.3.89</h1>
-        <p>FPMCAE ist eine universelle Simulationsanalysesoftware für komplexes Strukturverhalten, eigenständig entwickelt vom Team von Professor Luo Yaozhi an der Zhejiang-Universität. Es verwendet die Finite-Partikel-Methode als Kernalgorithmus, integriert Vor- und Nachbearbeitungsfunktionen, verschiedene Solver-Engines und beinhaltet Parallelrechnungstechnologie.</p>
-        <h2>Softwareeigenschaften</h2>
-        <ul>
-            <li><strong>Kernalgorithmus:</strong> Finite-Partikel-Methode für effiziente Simulationsanalyse komplexer Strukturverhalten.</li>
-            <li><strong>Vor- und Nachbearbeitung:</strong> Leistungsstarke Werkzeuge für Dateneingabe und Ergebnisanalyse.</li>
-            <li><strong>Verschiedene Solver-Engines:</strong> Unterstützt mehrere Solver-Typen für unterschiedliche Simulationsbedürfnisse.</li>
-            <li><strong>Paralleles Rechnen:</strong> Integrierte Technologie zur Steigerung der Recheneffizienz, geeignet für groß angelegte Simulationen.</li>
-        </ul>
-        <h2>Anwendungsbereiche</h2>
-        <ul>
-            <li>Bauingenieurwesen und Verkehr</li>
-            <li>Maschinenbau</li>
-            <li>Luft- und Raumfahrt</li>
-            <li>Andere Bereiche, die eine Simulation komplexen Strukturverhaltens erfordern</li>
-        </ul>
-        <h2>Kontaktieren Sie uns</h2>
-        <p>Wenn Sie Fragen oder Vorschläge haben, kontaktieren Sie uns bitte:</p>
-        <ul>
-            <li>E-Mail: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>QQ-Gruppe: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>Download</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">Laden Sie die neueste Version von FPMCAE V2.0.3.89 herunter</a></p>
-    </div>
+    <!-- 联系我们模块 -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="contact_title">联系我们</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="label" data-i18n="email_label">邮箱：</span>
+                            <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-qq"></i>
+                        <div>
+                            <span class="label" data-i18n="qq_label">QQ技术群：</span>
+                            <span>437808661</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr-codes">
+                    <div class="qr-item">
+                        <div class="qr-placeholder">
+                            <img src="images/qrcodes/qr-official.svg" alt="微信公众号">
+                        </div>
+                        <p data-i18n="qr_wechat">扫码关注我们</p>
+                    </div>
+                    <div class="qr-item">
+                        <div class="qr-placeholder">
+                            <img src="images/qrcodes/qr-group.svg" alt="QQ技术群">
+                        </div>
+                        <p data-i18n="qr_qq">技术交流群</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Russian Content -->
-    <div id="ru-content" style="display: none;">
-        <h1>Добро пожаловать в FPMCAE V2.0.3.89</h1>
-        <p>FPMCAE — это универсальное программное обеспечение для анализа моделирования сложных структурных поведений, самостоятельно разработанное командой профессора Луо Яочжи из Чжэцзянского университета. В качестве основного алгоритма используется метод конечных частиц, интегрирует функции пред- и постобработки, различные движки решателей и включает технологию параллельных вычислений.</p>
-        <h2>Особенности программы</h2>
-        <ul>
-            <li><strong>Основной алгоритм:</strong> Метод конечных частиц для эффективного анализа моделирования сложных структурных поведений.</li>
-            <li><strong>Пред- и постобработка:</strong> Мощные инструменты для ввода данных и анализа результатов.</li>
-            <li><strong>Различные движки решателей:</strong> Поддерживает несколько типов решателей для удовлетворения различных потребностей моделирования.</li>
-            <li><strong>Параллельные вычисления:</strong> Интегрированная технология для повышения вычислительной эффективности, подходит для крупномасштабных симуляций.</li>
-        </ul>
-        <h2>Области применения</h2>
-        <ul>
-            <li>Гражданское строительство и транспорт</li>
-            <li>Машиностроение</li>
-            <li>Аэрокосмическая отрасль</li>
-            <li>Другие области, требующие моделирования сложных структурных поведений</li>
-        </ul>
-        <h2>Свяжитесь с нами</h2>
-        <p>Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами:</p>
-        <ul>
-            <li>Электронная почта: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>QQ группа: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>Скачать</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">Скачать последнюю версию FPMCAE V2.0.3.89</a></p>
-    </div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">FPM<span class="highlight">CAE</span></span>
+                    <p data-i18n="footer_desc">浙江大学自主研发的通用结构复杂行为仿真分析软件</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#intro" data-i18n="nav_intro">简介</a>
+                    <a href="#examples" data-i18n="nav_examples">算例库</a>
+                    <a href="#contact" data-i18n="nav_contact">联系我们</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 FPMCAE. <span data-i18n="copyright">版权所有</span></p>
+                    <p data-i18n="footer_org">浙江大学 · 浙江大学长三角智慧绿洲创新中心</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Japanese Content -->
-    <div id="ja-content" style="display: none;">
-        <h1>FPMCAE V2.0.3.89へようこそ</h1>
-        <p>FPMCAEは、浙江大学の羅尭治教授のチームによって独自に開発された、複雑な構造挙動のための汎用シミュレーション解析ソフトウェアです。有限質点法をコアアルゴリズムとして使用し、前処理および後処理機能、さまざまなソルバーエンジンを統合し、並列計算技術を組み込んでいます。</p>
-        <h2>ソフトウェアの特徴</h2>
-        <ul>
-            <li><strong>コアアルゴリズム：</strong>有限質点法による複雑な構造挙動の効率的なシミュレーション解析。</li>
-            <li><strong>前後処理機能：</strong>データ入力と結果分析のための強力なツール。</li>
-            <li><strong>さまざまなソルバーエンジン：</strong>さまざまなシミュレーションニーズに対応する複数のタイプのソルバーをサポート。</li>
-            <li><strong>並列計算：</strong>計算効率を高める統合技術で、大規模なシミュレーションに適しています。</li>
-        </ul>
-        <h2>適用分野</h2>
-        <ul>
-            <li>土木工学と交通</li>
-            <li>機械製造</li>
-            <li>航空宇宙</li>
-            <li>複雑な構造挙動のシミュレーションを必要とするその他の分野</li>
-        </ul>
-        <h2>お問い合わせ</h2>
-        <p>ご質問やご提案がございましたら、お気軽にお問い合わせください：</p>
-        <ul>
-            <li>メール: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>QQグループ: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>ダウンロード</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">最新のFPMCAE V2.0.3.89をダウンロード</a></p>
-    </div>
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Arabic Content -->
-    <div id="ar-content" style="display: none; direction: rtl; text-align: right;">
-        <h1>مرحبًا بك في FPMCAE V2.0.3.89</h1>
-        <p>FPMCAE هو برنامج تحليل محاكاة متعدد الأغراض للسلوكيات الهيكلية المعقدة، تم تطويره بشكل مستقل بواسطة فريق البروفيسور Luo Yaozhi في جامعة Zhejiang. يستخدم طريقة الجسيمات المحدودة كخوارزمية أساسية، ويجمع بين وظائف المعالجة المسبقة واللاحقة، ومحركات حل متنوعة، ويتضمن تقنية الحوسبة الموازية.</p>
-        <h2>ميزات البرنامج</h2>
-        <ul>
-            <li><strong>الخوارزمية الأساسية:</strong> طريقة الجسيمات المحدودة لتحليل محاكاة فعال للسلوكيات الهيكلية المعقدة.</li>
-            <li><strong>المعالجة المسبقة واللاحقة:</strong> أدوات قوية لإدخال البيانات وتحليل النتائج.</li>
-            <li><strong>محركات حل متنوعة:</strong> يدعم أنواعًا متعددة من الحلول لتلبية احتياجات المحاكاة المختلفة.</li>
-            <li><strong>الحوسبة الموازية:</strong> تقنية مدمجة لتعزيز الكفاءة الحسابية، مناسبة للمحاكاة واسعة النطاق.</li>
-        </ul>
-        <h2>مجالات التطبيق</h2>
-        <ul>
-            <li>الهندسة المدنية والنقل</li>
-            <li>التصنيع الميكانيكي</li>
-            <li>الطيران والفضاء</li>
-            <li>مجالات أخرى تتطلب محاكاة السلوك الهيكلي المعقد</li>
-        </ul>
-        <h2>اتصل بنا</h2>
-        <p>إذا كان لديك أي أسئلة أو اقتراحات، يرجى الاتصال بنا:</p>
-        <ul>
-            <li>البريد الإلكتروني: <a href="mailto:fpmcae@zju.edu.cn">fpmcae@zju.edu.cn</a></li>
-            <li>مجموعة QQ: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9spwLes4DGCERunRATnQIUfYZWxY5CjR&jump_from=webapi&qr=1">437808661</a></li>
-        </ul>
-        <h2>التنزيل</h2>
-        <p><a href="https://github.com/FPMManagers/FPMCAE/releases/tag/V2.0.3.89">قم بتنزيل أحدث إصدار من FPMCAE V2.0.3.89</a></p>
-    </div>
-
-</div>
-
-<script>
-    function switchLanguage(language) {
-        var languages = ['zh', 'en', 'es', 'fr', 'de', 'ru', 'ja', 'ar'];
-        languages.forEach(function(lang) {
-            document.getElementById(lang + '-content').style.display = 'none';
-        });
-        document.getElementById(language + '-content').style.display = 'block';
-    }
-</script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

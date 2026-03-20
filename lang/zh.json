@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "name": "简体中文",
+    "code": "zh"
+  },
+  "nav": {
+    "download": "下载",
+    "docs": "文档",
+    "language": "语言",
+    "current_lang": "中文",
+    "docs_menu": {
+      "user_manual": "使用文档",
+      "quick_start": "快速上手",
+      "fpmt_format": "FPMT文件格式"
+    }
+  },
+  "banner": {
+    "subtitle1": "浙江大学 · 浙江大学长三角智慧绿洲创新中心",
+    "slogan": "科技未来 | 无尽探索",
+    "title2": "先进仿真技术",
+    "desc2": "基于有限质点法的结构复杂行为分析",
+    "title3": "多领域应用",
+    "desc3": "土木交通 · 机械制造 · 航空航天"
+  },
+  "intro": {
+    "title": "简介",
+    "content": "FPMCAE是由浙江大学罗尧治教授团队自主研发的通用结构复杂行为仿真分析软件。采用有限质点法作为核心算法，集成了前后处理功能和多种求解器引擎，并融入了并行计算技术。"
+  },
+  "features": {
+    "title": "功能",
+    "items": [
+      {
+        "title": "核心算法",
+        "desc": "有限质点法，高效进行结构复杂行为的仿真分析。"
+      },
+      {
+        "title": "前后处理功能",
+        "desc": "强大的数据输入和结果分析工具。"
+      },
+      {
+        "title": "多种求解器引擎",
+        "desc": "支持多种类型的求解器，满足不同仿真需求。"
+      },
+      {
+        "title": "并行计算",
+        "desc": "集成技术提升计算效率，适合大规模模拟。"
+      }
+    ]
+  },
+  "applications": {
+    "title": "应用领域",
+    "items": [
+      "土木交通",
+      "机械制造",
+      "航空航天",
+      "其他需要结构复杂行为仿真分析的领域"
+    ]
+  },
+  "news": {
+    "title": "最近消息",
+    "view_more": "查看更多",
+    "empty": "暂无消息"
+  },
+  "examples": {
+    "title": "算例库",
+    "filters": {
+      "all": "全部",
+      "structure": "结构分析",
+      "multi-scale": "多尺度分析",
+      "form-finding": "找形分析",
+      "earthquake-simulation": "结构地震模拟",
+      "nonlinear": "非线性分析"
+    },
+    "actions": {
+      "download": "下载算例",
+      "view_detail": "查看详情",
+      "preview": "预览"
+    },
+    "meta": {
+      "file_size": "文件大小",
+      "update_time": "更新时间",
+      "downloads": "下载次数"
+    }
+  },
+  "video": {
+    "title": "FPMCAE视频介绍",
+    "not_support": "您的浏览器不支持视频播放。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "email": {
+      "label": "邮箱：",
+      "value": "fpmcae@zju.edu.cn"
+    },
+    "qq": {
+      "label": "QQ技术群：",
+      "value": "437808661"
+    },
+    "qr": {
+      "wechat": "扫码关注我们",
+      "qq": "技术交流群"
+    }
+  },
+  "footer": {
+    "description": "浙江大学自主研发的通用结构复杂行为仿真分析软件",
+    "nav": {
+      "intro": "简介",
+      "features": "功能",
+      "examples": "算例库",
+      "contact": "联系我们"
+    },
+    "copyright": "版权所有",
+    "organization": "浙江大学 · 浙江大学长三角智慧绿洲创新中心"
+  }
+}
