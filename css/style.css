@@ -221,8 +221,8 @@ img {
 
 /* 左侧内容区 */
 .hero-content {
-    flex: 0 0 45%;
-    max-width: 520px;
+    flex: 0 0 40%;
+    max-width: 580px;
 }
 
 .hero-title {
@@ -294,8 +294,8 @@ img {
 
 /* 右侧展示卡片区 */
 .hero-showcase {
-    flex: 0 0 55%;
-    max-width: 680px;
+    flex: 0 0 60%;
+    max-width: 700px;
 }
 
 .showcase-frame {
