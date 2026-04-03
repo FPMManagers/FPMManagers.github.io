@@ -1,5 +1,16 @@
 [
   {
+    "id": 7,
+    "title": "FPMCAE V2.10 版本发布",
+    "titleEn": "FPMCAE V2.10 version released",
+    "summary": "新版本发布，从草图、单元类型、截面属性、界面、后处理和多语言等多方面进行提升优化。",
+    "summaryEn": "The new version has been released, with improvements and optimizations made in various aspects such as sketches, element types, section properties, interfaces, post-processing, and multiple languages.",
+    "date": "2026-04-03",
+    "icon": "data/newsImages/new4.png",
+    "url": "data/newsHtml/FPMCAE V2.10 版本发布/FPMCAE V2.10 版本发布.html",
+    "featured": true
+  },
+  {
     "id": 6,
     "title": "FPMCAE功能分享系列（1）--截面渲染开关",
     "titleEn": "FPMCAE Feature Sharing Series (1) -- Section Rendering Switch",
