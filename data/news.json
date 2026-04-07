@@ -1,5 +1,16 @@
 [
   {
+    "id": 8,
+    "title": "有限质点法介绍（2）",
+    "titleEn": "Introduction to Finite Particle Method (2)",
+    "summary": "本期介绍有限质点法的基本概念--点值描述。",
+    "summaryEn": "This issue introduces the basic concept of the finite particle method - point value description.",
+    "date": "2026-04-07",
+    "icon": "data/newsImages/有限质点法介绍-点值描述.png",
+    "url": "https://mp.weixin.qq.com/s/roVXTo-P-W8Z9vkCWblnRg",
+    "featured": true
+  },
+  {
     "id": 7,
     "title": "FPMCAE V2.10 版本发布",
     "titleEn": "FPMCAE V2.10 version released",
