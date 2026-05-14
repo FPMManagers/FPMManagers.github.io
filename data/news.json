@@ -1,5 +1,38 @@
 [
   {
+    "id": 11,
+    "title": "FPMCAE平台算例介绍（3）| 摩擦摆支座单元在框架隔震分析中的应用",
+    "titleEn": "Introduction to FPMCAE platform examples(3) | Application of friction pendulum support element in frame seismic isolation analysis",
+    "summary": "本文以十层钢筋混凝土框架结构为例，采用FPMCAE中的摩擦摆支座工程单元建立隔震分析模型。",
+    "summaryEn": "This article takes a ten-story reinforced concrete frame structure as an example and uses the friction pendulum support engineering element in FPMCAE to establish a seismic isolation analysis model.",
+    "date": "2026-05-14",
+    "icon": "data/newsImages/FPMCAE平台算例介绍（3）--摩擦摆支座单元在框架隔震分析中的应用.png",
+    "url": "https://mp.weixin.qq.com/s/ZkIwGOxgBF03mU2uq5Jk4A",
+    "featured": true
+  },
+  {
+    "id": 10,
+    "title": "FPMCAE平台算例介绍（2）| 手把手教你圆管扭转分析",
+    "titleEn": "Introduction to FPMCAE platform examples(2) | Step-by-step guide to torsion analysis of circular tubes",
+    "summary": "教大家使用FPMCAE V2.1平台进行圆管扭转分析。",
+    "summaryEn": "This article will introduce the data extraction function in FPMCAE to help you quickly and efficiently obtain the data results you need.",
+    "date": "2026-05-06",
+    "icon": "data/newsImages/FPMCAE平台算例介绍（2）--手把手教你圆管扭转分析.png",
+    "url": "https://mp.weixin.qq.com/s/Ohtv5mXiUrsySFX8Bixd2A",
+    "featured": true
+  },
+  {
+    "id": 9,
+    "title": "FPMCAE功能分享系列（2）--后处理数据提取",
+    "titleEn": "FPMCAE Feature Sharing Series (2) -- Post-processing data extraction",
+    "summary": "本期将为大家介绍FPMCAE中的数据提取功能，帮助大家快速、高效地获取所需结果数据。",
+    "summaryEn": "This tutorial will teach you how to perform torsion analysis on circular tubes using the FPMCAE V2.1 platform.",
+    "date": "2026-04-19",
+    "icon": "data/newsImages/FPMCAE功能分享1-后处理数据提取.png",
+    "url": "https://mp.weixin.qq.com/s/RbZym6RQbY0shiSJ-L8M1Q",
+    "featured": true
+  },
+  {
     "id": 8,
     "title": "有限质点法介绍（2）",
     "titleEn": "Introduction to Finite Particle Method (2)",
@@ -48,7 +81,7 @@
     "title": "FPMCAE平台算例介绍 | 手把手教你索穹顶形态分析",
     "titleEn": "Introduction to FPMCAE platform examples | Step-by-step guide to cable dome shape analysis",
     "summary": "教大家使用FPMCAE V2.0平台进行的索穹顶张力结构初始形态（找形）分析。",
-    "summaryEn": "I will teach you how to use the FPMCAE V2.0 platform to perform initial form (form-finding) analysis of tension structures in cable domes.",
+    "summaryEn": "This tutorial will teach you how to perform initial morphological (shape finding) analysis of cable dome tension structures using the FPMCAE V2.0 platform.",
     "date": "2026-03-12",
     "icon": "data/newsImages/new1.png",
     "url": "https://mp.weixin.qq.com/s/h9xI38HX-PMlaGoqgwYBjg",
