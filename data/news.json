@@ -1,5 +1,16 @@
 [
   {
+    "id": 12,
+    "title": "仿真案例（4）： FPMCAE能 “接火箭” 啦！",
+    "titleEn": "Simulation Case (4): FPMCAE Can Now 'Catch a Rocket'!",
+    "summary": "本文以FPMCAEv2.5版本搭建“火箭回收”模型进行仿真计算。",
+    "summaryEn": "In this paper, a 'rocket recovery' model is constructed using FPMCAE v2.5 for simulation calculations.",
+    "date": "2026-09-21",
+    "icon": "data/newsImages/仿真案例（4）： FPMCAE能 “接火箭” 啦！.png",
+    "url": "https://mp.weixin.qq.com/s/10yj0AE9BbST4ak7PV1uxg",
+    "featured": true
+  },
+  {
     "id": 11,
     "title": "FPMCAE平台算例介绍（3）| 摩擦摆支座单元在框架隔震分析中的应用",
     "titleEn": "Introduction to FPMCAE platform examples(3) | Application of friction pendulum support element in frame seismic isolation analysis",
