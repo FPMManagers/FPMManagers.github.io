@@ -90,6 +90,27 @@
 .showcase-frame .carousel-slide { background: #101c2c; }
 .showcase-frame .carousel-dots { bottom: 12px; }
 
+/* Introduction and video share one section. */
+.intro-section { padding: clamp(70px, 7vw, 120px) 0; background: #f3f7f8; }
+.intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(48px, 6vw, 110px);
+}
+.intro-content { max-width: none; margin: 0; text-align: left; }
+.intro-eyebrow { margin-bottom: 16px; color: #0c8ea1; font-size: .72rem; font-weight: 700; letter-spacing: .18em; }
+.intro-content .section-title { margin-bottom: 18px; font-size: clamp(2rem, 2.5vw, 3rem); color: #102c3c; }
+.intro-content .section-line { margin: 0 0 26px; }
+.intro-text { max-width: 560px; line-height: 2; }
+.intro-layout .video-container { width: 100%; max-width: none; margin: 0; }
+.intro-video-title { margin-bottom: 14px; color: #42616d; font-size: .9rem; font-weight: 600; }
+.intro-layout .video-wrapper { border: 1px solid rgba(12, 142, 161, .22); border-radius: 8px; box-shadow: 0 20px 55px rgba(11, 45, 57, .15); }
+
+@media (max-width: 800px) {
+    .intro-layout { grid-template-columns: 1fr; gap: 36px; }
+}
+
 @media (max-width: 992px) {
     .hero-banner { min-height: auto; padding: 80px 0; }
     .hero-wrapper { flex-direction: column; align-items: stretch; gap: 48px; text-align: left; }
