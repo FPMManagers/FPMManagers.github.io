@@ -1,5 +1,49 @@
 [
   {
+    "id": 16,
+    "title": "仿真案例（8）：FPMCAE二次开发，解锁柔性光伏的“专业化”分析流程！",
+    "titleEn": "Simulation Case (8): Customizing FPMCAE for Flexible Photovoltaic Analysis",
+    "summary": "通过FPMCAE二次开发，实现柔性光伏阵列参数化建模和风荷载时程工具。",
+    "summaryEn": "Customizing FPMCAE to build a parametric flexible photovoltaic array model and a wind load time-history tool.",
+    "date": "2026-10-26",
+    "icon": "data/newsImages/case8.jpg",
+    "url": "https://mp.weixin.qq.com/s/i78oBpGU6IllHfeOqde-wA",
+    "featured": true
+  },
+  {
+    "id": 15,
+    "title": "仿真案例（7）：用 FPMCAE 模拟梁拉拔试验",
+    "titleEn": "Simulation Case (7): Simulating a Beam Pull-out Test with FPMCAE",
+    "summary": "使用FPMCAE建立GFRP-UHPC梁试件拉拔试验模型，分析加载过程中的变形与受力响应。",
+    "summaryEn": "A GFRP-UHPC beam pull-out test model is used to examine deformation and force response under loading.",
+    "date": "2026-10-19",
+    "icon": "data/newsImages/case7.jpg",
+    "url": "https://mp.weixin.qq.com/s/Pv9wqo183n8NopGtmcreFQ",
+    "featured": true
+  },
+  {
+    "id": 14,
+    "title": "仿真案例（6）：用FPMCAE“拉一把”重物",
+    "titleEn": "Simulation Case (6): Lifting a Heavy Load with FPMCAE",
+    "summary": "使用FPMCAE模拟由定滑轮、动滑轮、柔性绳索和重物组成的提升系统。",
+    "summaryEn": "FPMCAE simulates a lifting system with fixed and moving pulleys, a flexible rope, and a load.",
+    "date": "2026-10-10",
+    "icon": "data/newsImages/case6.jpg",
+    "url": "https://mp.weixin.qq.com/s/ixt2orEXixsxUtpqFCBQIA",
+    "featured": true
+  },
+  {
+    "id": 13,
+    "title": "仿真案例（5）： 用FPMCAE “撑把伞”",
+    "titleEn": "Simulation Case (5): Opening an Umbrella with FPMCAE",
+    "summary": "使用FPMCAE模拟包含伞骨机构和柔性伞面的雨伞开合过程。",
+    "summaryEn": "FPMCAE simulates the opening and closing of an umbrella with a rib mechanism and flexible canopy.",
+    "date": "2026-09-30",
+    "icon": "data/newsImages/case5.jpg",
+    "url": "https://mp.weixin.qq.com/s/shxHdWaGqGaanOesgKRgVw",
+    "featured": true
+  },
+  {
     "id": 12,
     "title": "仿真案例（4）： FPMCAE能 “接火箭” 啦！",
     "titleEn": "Simulation Case (4): FPMCAE Can Now 'Catch a Rocket'!",
