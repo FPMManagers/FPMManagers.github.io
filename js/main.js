@@ -27,6 +27,7 @@ const translations = {
         
         // Download Section
         download_title: 'FPMCAE，面向工程结构的\n通用复杂行为分析平台',
+        hero_description: '以有限质点法探索复杂结构行为，让工程仿真更直观、更高效。',
         download_now: '立即下载',
         all_downloads: '所有下载',
         
@@ -82,6 +83,7 @@ const translations = {
         
         // Download Section
         download_title: 'FPMCAE, A General Complex Behavior\nAnalysis Platform for Engineering Structures',
+        hero_description: 'Explore complex structural behavior with the finite particle method, making engineering simulation more intuitive and efficient.',
         download_now: 'Download Now',
         all_downloads: 'All Downloads',
         
@@ -279,7 +281,7 @@ const defaultExamplesData = [
 // News Data
 // ============================================
 let newsData = [];
-const newsPreviewCount = 6;
+const newsPreviewCount = 8;
 let newsExpanded = false;
 
 // ============================================
