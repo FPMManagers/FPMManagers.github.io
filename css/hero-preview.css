@@ -131,6 +131,34 @@
 .contact-section {
     background: radial-gradient(ellipse at 50% 100%, rgba(22, 128, 142, .16), transparent 55%), #091d2a;
 }
+.intro-section, .news-section, .examples-section, .contact-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.intro-section::before, .news-section::before, .examples-section::before, .contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(97, 192, 205, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(97, 192, 205, .055) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+.intro-section::after, .news-section::after, .examples-section::after, .contact-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(117, 245, 239, .9) 0 2px, rgba(71, 215, 218, .28) 3px, transparent 9px),
+        radial-gradient(circle, rgba(112, 221, 240, .7) 0 1.5px, rgba(65, 190, 218, .22) 3px, transparent 8px);
+    background-size: 240px 240px, 320px 320px;
+    background-position: 40px 40px, 120px 200px;
+    animation: particles-flow 16s linear infinite;
+}
+.news-section::after, .contact-section::after { animation-delay: -8s; }
 .intro-content .section-title,
 .news-section .section-title,
 .examples-section .section-title,
@@ -170,6 +198,17 @@
 }
 
 /* Restrained motion reinforces the simulation theme. */
+.hero-bg-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(117, 245, 239, .9) 0 2px, rgba(71, 215, 218, .28) 3px, transparent 9px),
+        radial-gradient(circle, rgba(112, 221, 240, .7) 0 1.5px, rgba(65, 190, 218, .22) 3px, transparent 8px);
+    background-size: 240px 240px, 320px 320px;
+    background-position: 40px 40px, 120px 200px;
+    animation: particles-flow 16s linear infinite;
+}
 .hero-bg-pattern::after {
     content: '';
     position: absolute;
@@ -208,6 +247,10 @@
     from { transform: translate3d(-3%, 2%, 0) scale(.95); opacity: .65; }
     to { transform: translate3d(3%, -2%, 0) scale(1.08); opacity: 1; }
 }
+@keyframes particles-flow {
+    from { background-position: 40px 40px, 120px 200px; }
+    to { background-position: 280px -200px, -200px -120px; }
+}
 @keyframes hero-arrive {
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
@@ -222,7 +265,8 @@
 }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .hero-bg-pattern::after, .hero-content, .hero-showcase, .showcase-bar i { animation: none; }
+    .hero-bg-pattern::before, .hero-bg-pattern::after, .hero-content, .hero-showcase, .showcase-bar i { animation: none; }
+    .intro-section::after, .news-section::after, .examples-section::after, .contact-section::after { animation: none; }
     .intro-layout .play-btn::after { animation: none; }
     .intro-layout .video-wrapper, .intro-layout .play-btn { transition: none; }
     .contact-section .qr-placeholder { transition: none; }
