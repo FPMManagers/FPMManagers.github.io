@@ -755,6 +755,10 @@ img {
     text-align: center;
 }
 
+.news-more button[hidden] {
+    display: none;
+}
+
 /* ============================================
    Examples Section
    ============================================ */

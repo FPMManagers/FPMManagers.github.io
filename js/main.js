@@ -279,6 +279,8 @@ const defaultExamplesData = [
 // News Data
 // ============================================
 let newsData = [];
+const newsPreviewCount = 6;
+let newsExpanded = false;
 
 // ============================================
 // Examples Data
@@ -418,8 +420,9 @@ function setLanguage(lang, save = true) {
 function renderNews() {
     const container = document.getElementById('news-grid');
     if (!container) return;
-    
-    container.innerHTML = newsData.map(news => {
+
+    const visibleNews = newsExpanded ? newsData : newsData.slice(0, newsPreviewCount);
+    container.innerHTML = visibleNews.map(news => {
         const title = currentLang === 'zh' ? news.title : (news.titleEn || news.title);
         const summary = currentLang === 'zh' ? news.summary : (news.summaryEn || news.summary);
         return `
@@ -434,6 +437,21 @@ function renderNews() {
             </div>
         </div>
     `}).join('');
+
+    const toggle = document.getElementById('news-toggle');
+    if (toggle) {
+        toggle.hidden = newsData.length <= newsPreviewCount;
+        toggle.setAttribute('aria-expanded', String(newsExpanded));
+        toggle.querySelector('span').textContent = newsExpanded
+            ? (currentLang === 'zh' ? '收起' : 'Show Less')
+            : translations[currentLang].view_more;
+        toggle.querySelector('i').className = newsExpanded ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+    }
+}
+
+function toggleNews() {
+    newsExpanded = !newsExpanded;
+    renderNews();
 }
 
 function openNews(url) {
@@ -582,14 +600,6 @@ function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-    });
-}
-
-// 滚动到页面底部的函数
-function scrollToBottom() {
-    window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth'  // 平滑滚动
     });
 }
 

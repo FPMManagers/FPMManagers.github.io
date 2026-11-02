@@ -138,9 +138,9 @@
                 <!-- 消息卡片将通过JavaScript动态加载 -->
             </div>
             <div class="news-more">
-                <a href="javascript:void(0);" onclick="scrollToBottom()" class="btn btn-primary" data-i18n="view_more">
-                    <i class="fas fa-arrow-down"></i> 查看更多
-                </a>
+                <button type="button" id="news-toggle" onclick="toggleNews()" class="btn btn-primary" aria-controls="news-grid" aria-expanded="false">
+                    <i class="fas fa-arrow-down" aria-hidden="true"></i> <span>查看更多</span>
+                </button>
             </div>
         </div>
     </section>
