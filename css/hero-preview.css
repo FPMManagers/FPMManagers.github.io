@@ -73,7 +73,9 @@
     border-radius: 4px;
     background: #49d8d0;
     box-shadow: 0 8px 32px rgba(45, 212, 191, .2);
+    transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease;
 }
+.btn-primary-download:hover { background: #5eead4; }
 .showcase-frame {
     padding: 0;
     overflow: hidden;
@@ -158,6 +160,77 @@
 .contact-item a { color: #77e0df; }
 .contact-section .qr-item p { color: #b8d1d9; }
 .contact-section .qr-placeholder { border-color: rgba(125, 199, 210, .3); }
+.contact-section .qr-placeholder {
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.contact-section .qr-item:hover .qr-placeholder {
+    transform: translateY(-6px);
+    border-color: #76e5df;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .25), 0 0 22px rgba(73, 216, 208, .22);
+}
+
+/* Restrained motion reinforces the simulation theme. */
+.hero-bg-pattern::after {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(ellipse at 65% 50%, rgba(55, 211, 211, .1), transparent 35%);
+    animation: ambient-drift 12s ease-in-out infinite alternate;
+}
+.hero-content { animation: hero-arrive .8s ease-out both; }
+.hero-showcase { animation: hero-arrive .9s .15s ease-out both; }
+.showcase-frame { transition: border-color .35s ease, box-shadow .35s ease; }
+.showcase-frame:hover {
+    border-color: rgba(105, 219, 226, .65);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .4), 0 0 75px rgba(30, 197, 206, .18);
+}
+.showcase-bar i { animation: status-glow 3s ease-in-out infinite; }
+.intro-layout .video-wrapper { transition: border-color .35s ease, box-shadow .35s ease; }
+.intro-layout .video-wrapper:hover, .intro-layout .video-wrapper:focus-within {
+    border-color: rgba(105, 219, 226, .65);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, .3), 0 0 35px rgba(30, 197, 206, .12);
+}
+.intro-layout .play-btn { position: relative; }
+.intro-layout .play-btn::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 1px solid rgba(103, 232, 224, .7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: video-ring 3s ease-out infinite;
+}
+.intro-layout .play-btn:focus-visible { outline: 2px solid #76e5df; outline-offset: 6px; }
+.news-card, .example-card { transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.filter-btn, .news-more .btn-primary { transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease; }
+
+@keyframes ambient-drift {
+    from { transform: translate3d(-3%, 2%, 0) scale(.95); opacity: .65; }
+    to { transform: translate3d(3%, -2%, 0) scale(1.08); opacity: 1; }
+}
+@keyframes hero-arrive {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes status-glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(91, 227, 210, .5); }
+    50% { box-shadow: 0 0 15px rgba(91, 227, 210, .9); }
+}
+@keyframes video-ring {
+    0% { transform: scale(.95); opacity: .7; }
+    70%, 100% { transform: scale(1.45); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-bg-pattern::after, .hero-content, .hero-showcase, .showcase-bar i { animation: none; }
+    .intro-layout .play-btn::after { animation: none; }
+    .intro-layout .video-wrapper, .intro-layout .play-btn { transition: none; }
+    .contact-section .qr-placeholder { transition: none; }
+    .contact-section .qr-item:hover .qr-placeholder { transform: none; }
+    .scroll-animate { opacity: 1; transform: none; transition: none; }
+    .news-card, .example-card, .showcase-frame, .filter-btn, .news-more .btn-primary { transition: none; }
+    .news-card:hover, .example-card:hover { transform: none; }
+}
 
 @media (max-width: 800px) {
     .intro-layout { grid-template-columns: 1fr; gap: 36px; }
